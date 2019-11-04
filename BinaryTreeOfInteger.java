@@ -288,6 +288,7 @@ public class BinaryTreeOfInteger {
      * encontrou o elemento.
      */
     public int level(Integer element) {
+        /* //Metodo original O(n+logn)
         Node aux = searchNodeRef(element, root);
         if(aux == null){
             return -1;
@@ -297,7 +298,34 @@ public class BinaryTreeOfInteger {
             levelNodo++;
             aux = aux.father;
         }
+        return levelNodo;*/
+
+        //Metodo otimizado O(n)
+        int levelNodo = searchNodeLevel(element, root);
+        if(levelNodo == 0){
+            levelNodo = -1;
+        }
+
         return levelNodo;
+    }
+
+    private int searchNodeLevel(Integer element, Node target) {
+        int levelcount = 0;
+        if (target != null) {
+            if (target.element.equals(element)) {
+                levelcount = 1;
+            } else {
+                levelcount = searchNodeLevel(element, target.left);
+                if (levelcount == 0) {
+                    levelcount = searchNodeLevel(element, target.right);
+                }
+
+                if(levelcount !=0){
+                    levelcount++;
+                }
+            }
+        }
+        return levelcount;
     }
    
     /**
