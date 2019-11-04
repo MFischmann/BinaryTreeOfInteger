@@ -325,7 +325,7 @@ public class BinaryTreeOfInteger {
                 }
             }
         }
-        return levelcount;
+        return levelcount - 1;
     }
    
     /**
@@ -338,7 +338,7 @@ public class BinaryTreeOfInteger {
             h = -1;
         }
         else{
-            h = heightAux(root);
+            h = heightAux(root)-1;
         }
         return h;
     }
