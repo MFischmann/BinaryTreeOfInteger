@@ -34,7 +34,13 @@ public class App {
         System.out.println("Arveore apos remocao 12:\n" + arv.positionsPre());
         System.out.println("Numero nodos: " + arv.size());
         */
-        System.out.println(arv.strPositionsCentral());
+
+        //System.out.println(arv.strPositionsCentral());
+        System.out.println(arv.level(10));
+        System.out.println(arv.level(12));
+        System.out.println(arv.level(5));
+        System.out.println(arv.level(11));
+
     }
     
 }

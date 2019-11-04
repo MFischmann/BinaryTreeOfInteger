@@ -288,8 +288,16 @@ public class BinaryTreeOfInteger {
      * encontrou o elemento.
      */
     public int level(Integer element) {
-        //TODO
-        return -1;
+        Node aux = searchNodeRef(element, root);
+        if(aux == null){
+            return -1;
+        }
+        int levelNodo = 1;
+        while(aux.father!=null){
+            levelNodo++;
+            aux = aux.father;
+        }
+        return levelNodo;
     }
    
     /**
