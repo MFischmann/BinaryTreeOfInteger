@@ -311,8 +311,7 @@ public class BinaryTreeOfInteger {
             h = -1;
         }
         else{
-            h = 0;
-            h =+ heightAux(root);
+            h = heightAux(root);
         }
         return h;
     }
@@ -334,7 +333,6 @@ public class BinaryTreeOfInteger {
         else{
             hAux = hAux + hAuxR;
         }
-
         return hAux;
     }
     

@@ -41,6 +41,7 @@ public class App {
         //System.out.println(arv.level(5));
         //System.out.println(arv.level(11));
 
+         //Testes para metodo height
         System.out.println("Altura arv: " + arv.height());
         System.out.println(arv.addRight(3, 7));
         System.out.println("Altura arv: " + arv.height());
@@ -48,6 +49,7 @@ public class App {
         System.out.println("Altura arv: " + arv.height());
         System.out.println(arv.addLeft(70, 8));
         System.out.println("Altura arv: " + arv.height());
+        
     }
     
 }
