@@ -222,7 +222,6 @@ public class BinaryTreeOfInteger {
      * @return LinkedListOfInteger lista com os elementos da arvore
      */  
     public LinkedListOfInteger positionsWidth() {
-        //TODO
         LinkedListOfInteger res = new LinkedListOfInteger();
         Queue<Node> q = new Queue<>();
         q.enqueue(root);
@@ -241,14 +240,25 @@ public class BinaryTreeOfInteger {
     }
     
     /**
-     * Procura pelo elemento passado por parametro e retorna o seu pai.
+     * Procura pelo elemento passado por parametro e remove subarvore.
      * @param element elemento raiz da subarvore a ser removida.
      * @return true se o elemento passado por parametro for encontrado
      * e removido ou false caso contrario.
      */     
     public boolean removeBranch(Integer element) {
-        //TODO
-        return false;
+        Node aux = searchNodeRef(element, root);
+        if(aux==null){
+            return false;
+        }
+        count = count - countNodes(aux);
+        if(aux.father.left==aux){
+            aux.father.left = null;
+        }
+        else if(aux.father.right==aux){
+            aux.father.right = null;
+        }
+        aux.father = null;
+        return true;
     }        
 
     /** 

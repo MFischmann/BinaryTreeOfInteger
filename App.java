@@ -19,7 +19,18 @@ public class App {
         //System.out.println(arv.positionsPre());
         //System.out.println(arv.positionsPos());
         //System.out.println(arv.positionsCentral());
-        System.out.println(arv.positionsWidth());
+        //System.out.println(arv.positionsWidth());
+        System.out.println("Arveore antes remocao \n" + arv.positionsPre());
+        System.out.println("Numero nodos: " + arv.size());
+        System.out.println("Remocao 5: " + arv.removeBranch(5));
+        System.out.println("Arveore apos remocao 5:\n" + arv.positionsPre());
+        System.out.println("Numero nodos: " + arv.size());
+        System.out.println("Remocao 3: " + arv.removeBranch(3));
+        System.out.println("Arveore apos remocao 3:\n" + arv.positionsPre());
+        System.out.println("Numero nodos: " + arv.size());
+        System.out.println("Remocao 12: " + arv.removeBranch(12));
+        System.out.println("Arveore apos remocao 12:\n" + arv.positionsPre());
+        System.out.println("Numero nodos: " + arv.size());
     }
     
 }
