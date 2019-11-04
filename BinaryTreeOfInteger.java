@@ -377,7 +377,13 @@ public class BinaryTreeOfInteger {
      * @return true se o elemento tem subarvore a esquerda, e false caso contrario.
      */     
     public boolean hasLeft(Integer element) {
-        //TODO
+        Node aux = searchNodeRef(element, root);
+        if(aux == null){
+            return false;
+        }
+        if(aux.left != null){
+            return true;
+        }
         return false;
     }
 
