@@ -102,8 +102,16 @@ public class BinaryTreeOfInteger {
      * contrario.
      */
     public boolean addLeft(Integer element, Integer father) {
+        Node aux = searchNodeRef(father, root);
+        if(aux == null || aux.left != null){
+            return false;
+        }
 
-        return false;
+        Node n = new Node(element);
+        aux.left = n;
+        n.father = aux;
+        count++;
+        return true;
     }
     
     /**
@@ -117,8 +125,16 @@ public class BinaryTreeOfInteger {
      * contrario.
      */    
     public boolean addRight(Integer element, Integer father) {
+        Node aux = searchNodeRef(father, root);
+        if(aux == null || aux.right != null){
+            return false;
+        }
 
-        return false;
+        Node n = new Node(element);
+        aux.right = n;
+        n.father = aux;
+        count++;
+        return true;
     }    
     
     /**
@@ -128,6 +144,7 @@ public class BinaryTreeOfInteger {
      * @return 
      */
     private int countNodes(Node n) {
+        //TODO
         return 0;
     }
 
@@ -137,6 +154,7 @@ public class BinaryTreeOfInteger {
      * @return LinkedListOfInteger lista com os elementos da arvore
      */
     public LinkedListOfInteger positionsPre() {
+        //TODO
         return null;
     }
 
@@ -146,6 +164,7 @@ public class BinaryTreeOfInteger {
      * @return LinkedListOfInteger lista com os elementos da arvore
      */
     public LinkedListOfInteger positionsPos() {
+        //TODO
         return null;
     }
 
@@ -155,6 +174,7 @@ public class BinaryTreeOfInteger {
      * @return LinkedListOfInteger lista com os elementos da arvore
      */    
     public LinkedListOfInteger positionsCentral() {
+        //TODO
         return null;
     }
     
@@ -164,6 +184,7 @@ public class BinaryTreeOfInteger {
      * @return LinkedListOfInteger lista com os elementos da arvore
      */  
     public LinkedListOfInteger positionsWidth() {
+        //TODO
         LinkedListOfInteger res = new LinkedListOfInteger();
 
         return res;
@@ -176,7 +197,7 @@ public class BinaryTreeOfInteger {
      * e removido ou false caso contrario.
      */     
     public boolean removeBranch(Integer element) {
-        // Implemente este metodo
+        //TODO
         return false;
     }        
 
@@ -186,6 +207,7 @@ public class BinaryTreeOfInteger {
      * @return String com todos os elementos da arvore
      */     
     public String strPositionsCentral() {
+        //TODO
         return "";
     }
 
@@ -197,6 +219,7 @@ public class BinaryTreeOfInteger {
      * encontrou o elemento.
      */
     public int level(Integer element) {
+        //TODO
         return -1;
     }
    
@@ -205,6 +228,7 @@ public class BinaryTreeOfInteger {
      * @return altura da arvore
      */
     public int height() {
+        //TODO
         return -1;
     }
     
@@ -215,7 +239,7 @@ public class BinaryTreeOfInteger {
      * @return true se o elemento esta em um nodo folha, e false caso contrario.
      */    
     public boolean isExternal(Integer element) {
-        // Implemente este metodo
+        //TODO
         return false;
     }
 
@@ -226,7 +250,7 @@ public class BinaryTreeOfInteger {
      * @return true se o elemento esta em um nodo interno, e false caso contrario.
      */       
     public boolean isInternal(Integer element) {
-        // Implemente este metodo
+        //TODO
         return false;
     }
 
@@ -238,7 +262,7 @@ public class BinaryTreeOfInteger {
      * @return true se o elemento tem subarvore a esquerda, e false caso contrario.
      */     
     public boolean hasLeft(Integer element) {
-        // Implemente este metodo
+        //TODO
         return false;
     }
 
@@ -250,7 +274,7 @@ public class BinaryTreeOfInteger {
      * @return true se o elemento tem subarvore a direita, e false caso contrario.
      */       
     public boolean hasRight(Integer element) {
-        // Implemente este metodo
+        //TODO
         return false;
     }
 
@@ -263,7 +287,7 @@ public class BinaryTreeOfInteger {
      * filho na subarvore da esquerda.
      */    
     public Integer getLeft(Integer element) {
-        // Implemente este metodo
+        //TODO
         return 0;
     }
 
@@ -276,7 +300,7 @@ public class BinaryTreeOfInteger {
      * filho na subarvore da direita.
      */        
     public Integer getRight(Integer element) {
-        // Implemente este metodo
+        //TODO
         return 0;
     }
 
@@ -287,7 +311,7 @@ public class BinaryTreeOfInteger {
      * parametro nao seja encontrado ou caso ele esteja na raiz.
      */     
     public Integer getParent(Integer element) {
-        // Implemente este metodo
+        //TODO
         return 0;
     }    
     
