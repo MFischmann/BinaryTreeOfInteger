@@ -10,11 +10,12 @@ public class App {
         arv.addLeft(12,15);
         arv.addRight(17,15);         
 
-        System.out.println(arv.contains(10));
-        System.out.println(arv.contains(2));
-        System.out.println(arv.contains(17));
-        arv.testaCountNodes();
+        //System.out.println(arv.contains(10));
+        //System.out.println(arv.contains(2));
+        //System.out.println(arv.contains(17));
+        //arv.testaCountNodes();
         //System.out.println(arv.strPositionsCentral());
+        System.out.println(arv.positionsPre());
     }
     
 }
