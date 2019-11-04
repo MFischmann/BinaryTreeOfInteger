@@ -450,8 +450,14 @@ public class BinaryTreeOfInteger {
      * parametro nao seja encontrado ou caso ele esteja na raiz.
      */     
     public Integer getParent(Integer element) {
-        //TODO
-        return 0;
+        Node aux = searchNodeRef(element, root);
+        if(aux == null){
+            return null;
+        }
+        if(aux.father != null){
+            return aux.father.element;
+        }
+        return null;
     }    
     
 }

@@ -71,10 +71,15 @@ public class App {
         arv.addLeft(11, 12);
         System.out.println("Qual filho a esq do elemento 12? "+arv.getLeft(12));
         */
+        /*
         System.out.println("Qual filho a dir do elemento 5? "+arv.getRight(5));
         System.out.println("Qual filho a dir do elemento 12? "+arv.getRight(12));
         arv.addRight(11, 12);
         System.out.println("Qual filho a dir do elemento 12? "+arv.getRight(12));
+        */
+        System.out.println("Qual pai do elemento 5? "+arv.getParent(5));
+        System.out.println("Qual pai do elemento 12? "+arv.getParent(12));
+        System.out.println("Qual pai do elemento 10? "+arv.getParent(10));
     }
     
 }
