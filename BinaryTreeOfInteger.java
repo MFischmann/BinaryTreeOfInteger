@@ -305,7 +305,6 @@ public class BinaryTreeOfInteger {
      * @return altura da arvore
      */
     public int height() {
-        //TODO
         int h;
         if(root == null){
             h = -1;
@@ -343,8 +342,14 @@ public class BinaryTreeOfInteger {
      * @return true se o elemento esta em um nodo folha, e false caso contrario.
      */    
     public boolean isExternal(Integer element) {
-        //TODO
-        return false;
+        Node aux = searchNodeRef(element, root);
+        if(aux == null){
+            return false;
+        }
+        if(aux.left != null || aux.right != null){
+            return false;
+        }
+        return true;
     }
 
     /**
@@ -354,7 +359,13 @@ public class BinaryTreeOfInteger {
      * @return true se o elemento esta em um nodo interno, e false caso contrario.
      */       
     public boolean isInternal(Integer element) {
-        //TODO
+        Node aux = searchNodeRef(element, root);
+        if(aux == null){
+            return false;
+        }
+        if(aux.left != null || aux.right != null){
+            return true;
+        }
         return false;
     }
 

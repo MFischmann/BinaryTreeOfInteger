@@ -41,7 +41,7 @@ public class App {
         //System.out.println(arv.level(5));
         //System.out.println(arv.level(11));
 
-         //Testes para metodo height
+        /* //Testes para metodo height
         System.out.println("Altura arv: " + arv.height());
         System.out.println(arv.addRight(3, 7));
         System.out.println("Altura arv: " + arv.height());
@@ -49,7 +49,12 @@ public class App {
         System.out.println("Altura arv: " + arv.height());
         System.out.println(arv.addLeft(70, 8));
         System.out.println("Altura arv: " + arv.height());
-        
+        */
+
+        System.out.println("Elemento 5 e externo? "+arv.isExternal(5));
+        System.out.println("Elemento 12 e externo? "+arv.isExternal(12));
+        System.out.println("Elemento 5 e interno? "+arv.isInternal(5));
+        System.out.println("Elemento 12 e interno? "+arv.isInternal(12));
     }
     
 }
