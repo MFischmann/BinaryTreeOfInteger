@@ -414,8 +414,14 @@ public class BinaryTreeOfInteger {
      * filho na subarvore da esquerda.
      */    
     public Integer getLeft(Integer element) {
-        //TODO
-        return 0;
+        Node aux = searchNodeRef(element, root);
+        if(aux == null){
+            return null;
+        }
+        if(aux.left != null){
+            return aux.left.element;
+        }
+        return null;
     }
 
     /**

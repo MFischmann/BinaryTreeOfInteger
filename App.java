@@ -60,11 +60,16 @@ public class App {
         System.out.println("Elemento 12 tem filho esq? "+arv.hasLeft(12));
         arv.addLeft(11, 12);
         System.out.println("Elemento 12 tem filho esq? "+arv.hasLeft(12));*/
-
+        /*
         System.out.println("Elemento 5 tem filho dir? "+arv.hasRight(5));
         System.out.println("Elemento 12 tem filho dir? "+arv.hasRight(12));
         arv.addRight(11, 12);
-        System.out.println("Elemento 12 tem filho dir? "+arv.hasRight(12));
+        System.out.println("Elemento 12 tem filho dir? "+arv.hasRight(12));*/
+
+        System.out.println("Qual filho a esq do elemento 5? "+arv.getLeft(5));
+        System.out.println("Qual filho a esq do elemento 12? "+arv.getLeft(12));
+        arv.addLeft(11, 12);
+        System.out.println("Qual filho a esq do elemento 12? "+arv.getLeft(12));
     }
     
 }
