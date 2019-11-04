@@ -55,10 +55,16 @@ public class App {
         //System.out.println("Elemento 12 e externo? "+arv.isExternal(12));
         //System.out.println("Elemento 5 e interno? "+arv.isInternal(5));
         //System.out.println("Elemento 12 e interno? "+arv.isInternal(12));
+        /*
         System.out.println("Elemento 5 tem filho esq? "+arv.hasLeft(5));
         System.out.println("Elemento 12 tem filho esq? "+arv.hasLeft(12));
         arv.addLeft(11, 12);
-        System.out.println("Elemento 12 tem filho esq? "+arv.hasLeft(12));
+        System.out.println("Elemento 12 tem filho esq? "+arv.hasLeft(12));*/
+
+        System.out.println("Elemento 5 tem filho dir? "+arv.hasRight(5));
+        System.out.println("Elemento 12 tem filho dir? "+arv.hasRight(12));
+        arv.addRight(11, 12);
+        System.out.println("Elemento 12 tem filho dir? "+arv.hasRight(12));
     }
     
 }
