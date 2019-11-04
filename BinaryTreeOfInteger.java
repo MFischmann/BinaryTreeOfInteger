@@ -267,10 +267,19 @@ public class BinaryTreeOfInteger {
      * @return String com todos os elementos da arvore
      */     
     public String strPositionsCentral() {
-        //TODO
-        return "";
+        String s = "";
+        s = strPositionsCentralAux(root, s);
+        return s;
     }
 
+    private String strPositionsCentralAux(Node aux, String s){
+        if(aux != null){
+            s = strPositionsCentralAux(aux.left, s);
+            s = s + aux.element + " ";
+            s = strPositionsCentralAux(aux.right, s);
+        }
+        return s;
+    }
     /**
      * Retorna o nivel do nodo no qual esta armazenado o elemento
      * passadado por parametro.
