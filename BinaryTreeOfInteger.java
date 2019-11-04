@@ -203,8 +203,17 @@ public class BinaryTreeOfInteger {
      * @return LinkedListOfInteger lista com os elementos da arvore
      */    
     public LinkedListOfInteger positionsCentral() {
-        //TODO
-        return null;
+        LinkedListOfInteger lst = new LinkedListOfInteger();
+        positionsCentralAux(root, lst);
+        return lst;
+    }
+
+    private void positionsCentralAux(Node n, LinkedListOfInteger lst){
+        if(n != null){
+            positionsCentralAux(n.left, lst);
+            lst.add(n.element);
+            positionsCentralAux(n.right, lst);
+        }
     }
     
     /** 
