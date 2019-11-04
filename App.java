@@ -36,11 +36,18 @@ public class App {
         */
 
         //System.out.println(arv.strPositionsCentral());
-        System.out.println(arv.level(10));
-        System.out.println(arv.level(12));
-        System.out.println(arv.level(5));
-        System.out.println(arv.level(11));
+        //System.out.println(arv.level(10));
+        //System.out.println(arv.level(12));
+        //System.out.println(arv.level(5));
+        //System.out.println(arv.level(11));
 
+        System.out.println("Altura arv: " + arv.height());
+        System.out.println(arv.addRight(3, 7));
+        System.out.println("Altura arv: " + arv.height());
+        System.out.println(arv.addLeft(8, 17));
+        System.out.println("Altura arv: " + arv.height());
+        System.out.println(arv.addLeft(70, 8));
+        System.out.println("Altura arv: " + arv.height());
     }
     
 }

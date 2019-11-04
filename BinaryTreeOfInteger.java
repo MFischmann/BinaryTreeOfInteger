@@ -306,7 +306,36 @@ public class BinaryTreeOfInteger {
      */
     public int height() {
         //TODO
-        return -1;
+        int h;
+        if(root == null){
+            h = -1;
+        }
+        else{
+            h = 0;
+            h =+ heightAux(root);
+        }
+        return h;
+    }
+
+    private int heightAux(Node aux){
+        int hAux = 1;
+        int hAuxL = 0;
+        int hAuxR = 0;
+        if(aux.left != null){
+            hAuxL = heightAux(aux.left);
+        }
+        if(aux.right != null){
+            hAuxR = heightAux(aux.right);
+        }
+
+        if(hAuxL > hAuxR){
+            hAux = hAux + hAuxL;
+        }
+        else{
+            hAux = hAux + hAuxR;
+        }
+
+        return hAux;
     }
     
     /**
