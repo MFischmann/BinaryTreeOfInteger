@@ -168,7 +168,6 @@ public class BinaryTreeOfInteger {
      * @return LinkedListOfInteger lista com os elementos da arvore
      */
     public LinkedListOfInteger positionsPre() {
-        //TODO
         LinkedListOfInteger lst = new LinkedListOfInteger();
         positionsPreAux(root, lst);
         return lst;
@@ -186,10 +185,18 @@ public class BinaryTreeOfInteger {
      * @return LinkedListOfInteger lista com os elementos da arvore
      */
     public LinkedListOfInteger positionsPos() {
-        //TODO
-        return null;
+        LinkedListOfInteger lst = new LinkedListOfInteger();
+        positionsPosAux(root, lst);
+        return lst;
     }
 
+    private void positionsPosAux(Node n, LinkedListOfInteger lst){
+        if(n != null){
+            positionsPosAux(n.left, lst);
+            positionsPosAux(n.right, lst);
+            lst.add(n.element);
+        }
+    }
     /** 
      * Retorna uma lista com todos os elementos da arvore na ordem de 
      * caminhamento central. Deve chamar um metodo auxiliar recursivo.

@@ -15,7 +15,8 @@ public class App {
         //System.out.println(arv.contains(17));
         //arv.testaCountNodes();
         //System.out.println(arv.strPositionsCentral());
-        System.out.println(arv.positionsPre());
+        //System.out.println(arv.positionsPre());
+        System.out.println(arv.positionsPos());
     }
     
 }
