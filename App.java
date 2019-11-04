@@ -8,7 +8,8 @@ public class App {
         arv.addLeft(2,5);
         arv.addRight(7,5);   
         arv.addLeft(12,15);
-        arv.addRight(17,15);         
+        arv.addRight(17,15); 
+
 
         //System.out.println(arv.contains(10));
         //System.out.println(arv.contains(2));
@@ -17,7 +18,8 @@ public class App {
         //System.out.println(arv.strPositionsCentral());
         //System.out.println(arv.positionsPre());
         //System.out.println(arv.positionsPos());
-        System.out.println(arv.positionsCentral());
+        //System.out.println(arv.positionsCentral());
+        System.out.println(arv.positionsWidth());
     }
     
 }

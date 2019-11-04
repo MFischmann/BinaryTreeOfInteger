@@ -224,7 +224,19 @@ public class BinaryTreeOfInteger {
     public LinkedListOfInteger positionsWidth() {
         //TODO
         LinkedListOfInteger res = new LinkedListOfInteger();
-
+        Queue<Node> q = new Queue<>();
+        q.enqueue(root);
+        Node aux;
+        while(!q.isEmpty()){
+            aux = q.dequeue();
+            res.add(aux.element);
+            if(aux.left!=null){
+                q.enqueue(aux.left);
+            }
+            if(aux.right!=null){
+                q.enqueue(aux.right);
+            }   
+        }
         return res;
     }
     
