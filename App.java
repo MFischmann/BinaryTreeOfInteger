@@ -13,6 +13,7 @@ public class App {
         System.out.println(arv.contains(10));
         System.out.println(arv.contains(2));
         System.out.println(arv.contains(17));
+        arv.testaCountNodes();
         //System.out.println(arv.strPositionsCentral());
     }
     

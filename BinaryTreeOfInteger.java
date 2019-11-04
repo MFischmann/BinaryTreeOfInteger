@@ -144,10 +144,24 @@ public class BinaryTreeOfInteger {
      * @return 
      */
     private int countNodes(Node n) {
-        //TODO
-        return 0;
+        int subcount = 0;
+        if(n != null){      
+            subcount++;
+            subcount = subcount + countNodes(n.left);
+            subcount = subcount + countNodes(n.right);
+        }
+        return subcount;
     }
-
+    /**
+     * Metodo publico para testar countNodes
+     */
+    public void testaCountNodes(){
+        System.out.println(countNodes(root));
+        System.out.println(countNodes(root.left));
+        System.out.println(countNodes(searchNodeRef(15, root)));
+        System.out.println(countNodes(searchNodeRef(17, root)));
+        System.out.println(countNodes(searchNodeRef(17, root).left));
+    }
     /** 
      * Retorna uma lista com todos os elementos da arvore na ordem de 
      * caminhamento pre-fixada. Deve chamar um metodo auxiliar recursivo.
