@@ -80,11 +80,18 @@ public class App {
         //System.out.println("Qual pai do elemento 5? "+arv.getParent(5));
         //System.out.println("Qual pai do elemento 12? "+arv.getParent(12));
         //System.out.println("Qual pai do elemento 10? "+arv.getParent(10));
+        /*
         System.out.println("Num folhas: "+arv.countLeaves());
         arv.addLeft(11, 12);
         System.out.println("Num folhas: "+arv.countLeaves());
         arv.addRight(13, 12);
         System.out.println("Num folhas: "+arv.countLeaves());
+        */
+        System.out.println("Num galhos: "+arv.countBranches());
+        arv.addLeft(11, 12);
+        System.out.println("Num galhos: "+arv.countBranches());
+        arv.addRight(13, 12);
+        System.out.println("Num galhos: "+arv.countBranches());
     }
     
 }
