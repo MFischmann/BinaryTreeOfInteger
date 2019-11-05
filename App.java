@@ -34,13 +34,13 @@ public class App {
         System.out.println("Arveore apos remocao 12:\n" + arv.positionsPre());
         System.out.println("Numero nodos: " + arv.size());
         */
-
+        /*
         System.out.println(arv.strPositionsCentral());
         System.out.println(arv.level(10));
         System.out.println(arv.level(12));
         System.out.println(arv.level(5));
         System.out.println(arv.level(11));
-
+        */
         /* //Testes para metodo height
         System.out.println("Altura arv: " + arv.height());
         System.out.println(arv.addRight(3, 7));
@@ -77,9 +77,14 @@ public class App {
         arv.addRight(11, 12);
         System.out.println("Qual filho a dir do elemento 12? "+arv.getRight(12));
         */
-        System.out.println("Qual pai do elemento 5? "+arv.getParent(5));
-        System.out.println("Qual pai do elemento 12? "+arv.getParent(12));
-        System.out.println("Qual pai do elemento 10? "+arv.getParent(10));
+        //System.out.println("Qual pai do elemento 5? "+arv.getParent(5));
+        //System.out.println("Qual pai do elemento 12? "+arv.getParent(12));
+        //System.out.println("Qual pai do elemento 10? "+arv.getParent(10));
+        System.out.println("Num folhas: "+arv.countLeaves());
+        arv.addLeft(11, 12);
+        System.out.println("Num folhas: "+arv.countLeaves());
+        arv.addRight(13, 12);
+        System.out.println("Num folhas: "+arv.countLeaves());
     }
     
 }

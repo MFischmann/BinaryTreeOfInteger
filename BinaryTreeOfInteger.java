@@ -152,6 +152,26 @@ public class BinaryTreeOfInteger {
         }
         return subcount;
     }
+
+    public int countLeaves() {
+        return countLeavesAux(root);
+    }
+
+    private int countLeavesAux(Node n){
+        int leafcount = 1;
+        
+        int leftleafcount = 0;
+        int rightleafcount = 0;
+        if(n.left != null){
+            leafcount = 0;
+            leftleafcount = countLeavesAux(n.left);
+        }
+        if(n.right != null){
+            leafcount = 0;
+            rightleafcount = countLeavesAux(n.right);
+        }
+        return leafcount + leftleafcount+ rightleafcount;
+    }
     /**
      * Metodo publico para testar countNodes
      */
