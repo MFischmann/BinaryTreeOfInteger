@@ -326,7 +326,7 @@ public class BinaryTreeOfInteger {
             levelNodo = -1;
         }
 
-        return levelNodo;
+        return levelNodo-1;
     }
 
     private int searchNodeLevel(Integer element, Node target) {
@@ -358,7 +358,7 @@ public class BinaryTreeOfInteger {
             h = -1;
         }
         else{
-            h = heightAux(root);
+            h = heightAux(root)-1;
         }
         return h;
     }
