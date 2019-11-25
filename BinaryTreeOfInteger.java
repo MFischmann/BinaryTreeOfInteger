@@ -527,4 +527,23 @@ public class BinaryTreeOfInteger {
         return null;
     }    
     
+    public boolean equals(BinaryTreeOfInteger b){
+        if(this.count != b.count){
+            return false;
+        }
+        return equalsAux(this.root, b.root);
+    }
+
+    private boolean equalsAux(Node a, Node b){
+        if(a == null && b == null){ // se ambos sairam de folha
+            return true;
+        }
+
+        if(a != null && b != null){//se ambos nodos existem
+            if(a.element == b.element){//se elementos sao iguais, usar equals para nao primitivos
+                return equalsAux(a.left, b.left)&&equalsAux(a.right, b.right); //recursao
+            }
+        }
+        return false; //Se um nodo for nulo e outro nao ou se elementos sao diferentes
+    }
 }
